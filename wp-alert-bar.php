@@ -2,9 +2,9 @@
 /*
     Plugin Name: WordPress Alert Bar
     Description: Alert Bar Plugin for WordPress
-    Version: 1.0.1
-    Author: Ryan Bracey
-    Author URI: https://www.ryanbracey.com/
+    Version: 2.0.0
+    Author: Questar III BOCES
+    Author URI: https://www.questar.org/
 */
 
 
