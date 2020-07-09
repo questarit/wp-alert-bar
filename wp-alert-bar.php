@@ -1,8 +1,8 @@
 <?php
 /*
-    Plugin Name: WP Alert Bar
+    Plugin Name: WordPress Alert Bar
     Description: Alert Bar Plugin for WordPress
-    Version: 1.0.0
+    Version: 1.0.1
     Author: Ryan Bracey
     Author URI: https://www.ryanbracey.com/
 */
@@ -16,7 +16,7 @@ include_once 'admin/mbwpab-customizer-scripts.php';
 include_once 'public/wp-alert-bar-public.php';
 
 // Enqueue public scripts
-add_action( 'wp_enqueue_scripts', 'mbwpab_enqueue_public_assets', 100 );
+add_action( 'wp_enqueue_scripts', 'mbwpab_enqueue_public_assets', 1 );
 function mbwpab_enqueue_public_assets() {
     wp_enqueue_style( 'mbwpab-style-css', plugins_url( 'public/css/style.css', __FILE__ ) );
     wp_enqueue_style( 'mbwpab-fontawesome-css', plugins_url( 'public/css/all.css', __FILE__ ) );
