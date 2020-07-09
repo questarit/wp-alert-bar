@@ -100,7 +100,7 @@ function mbwpab_add_section( $wp_customize ) {
         ) 
     );
 
-    $wp_customize->add_setting( 'cta' , array(
+    $wp_customize->add_setting( 'cta1' , array(
     		'type'				=>	'option',
             'default'     		=> 	'',
             'transport'   		=> 	'refresh',
@@ -108,7 +108,71 @@ function mbwpab_add_section( $wp_customize ) {
         ) 
     );
 
-    $wp_customize->add_setting( 'cta_link' , array(
+    $wp_customize->add_setting( 'cta1_link' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'mbwpab_sanitize_url',
+        ) 
+    ); 
+
+    $wp_customize->add_setting( 'cta2' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'sanitize_text_field',
+        ) 
+    );
+
+    $wp_customize->add_setting( 'cta2_link' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'mbwpab_sanitize_url',
+        ) 
+    ); 
+
+    $wp_customize->add_setting( 'cta3' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'sanitize_text_field',
+        ) 
+    );
+
+    $wp_customize->add_setting( 'cta3_link' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'mbwpab_sanitize_url',
+        ) 
+    ); 
+
+    $wp_customize->add_setting( 'cta4' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'sanitize_text_field',
+        ) 
+    );
+
+    $wp_customize->add_setting( 'cta4_link' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'mbwpab_sanitize_url',
+        ) 
+    ); 
+    
+    $wp_customize->add_setting( 'cta5' , array(
+    		'type'				=>	'option',
+            'default'     		=> 	'',
+            'transport'   		=> 	'refresh',
+            'sanitize_callback'	=>	'sanitize_text_field',
+        ) 
+    );
+
+    $wp_customize->add_setting( 'cta5_link' , array(
     		'type'				=>	'option',
             'default'     		=> 	'',
             'transport'   		=> 	'refresh',
@@ -206,20 +270,104 @@ function mbwpab_add_section( $wp_customize ) {
         )
     );
 
-    $wp_customize->add_control( 'cta', array(
+    $wp_customize->add_control( 'cta1', array(
             'label'         	=> 	'Call to Action',
             'description'   	=> 	'Add an alert call to action',
             'section'       	=> 	'mbwpab_content_section',
-            'settings'      	=> 	'cta',
+            'settings'      	=> 	'cta1',
             'type'          	=> 	'text',
         )
     );
 
-    $wp_customize->add_control( 'cta_link', array(
+    $wp_customize->add_control( 'cta1_link', array(
             'label'         	=> 	'Call to Action Link',
             'description'   	=> 	'Add a link to the call to action',
             'section'       	=> 	'mbwpab_content_section',
-            'settings'      	=> 	'cta_link',
+            'settings'      	=> 	'cta1_link',
+            'type'          	=> 	'url',
+            'input_attrs' 		=> 	array(
+		    	'placeholder'	=>	'http://www.google.com',
+			),
+        )
+    );
+
+    $wp_customize->add_control( 'cta2', array(
+            'label'         	=> 	'Call to Action',
+            'description'   	=> 	'Add an alert call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta2',
+            'type'          	=> 	'text',
+        )
+    );
+
+    $wp_customize->add_control( 'cta2_link', array(
+            'label'         	=> 	'Call to Action Link',
+            'description'   	=> 	'Add a link to the call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta2_link',
+            'type'          	=> 	'url',
+            'input_attrs' 		=> 	array(
+		    	'placeholder'	=>	'http://www.google.com',
+			),
+        )
+    );
+
+    $wp_customize->add_control( 'cta3', array(
+            'label'         	=> 	'Call to Action',
+            'description'   	=> 	'Add an alert call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta3',
+            'type'          	=> 	'text',
+        )
+    );
+
+    $wp_customize->add_control( 'cta3_link', array(
+            'label'         	=> 	'Call to Action Link',
+            'description'   	=> 	'Add a link to the call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta3_link',
+            'type'          	=> 	'url',
+            'input_attrs' 		=> 	array(
+		    	'placeholder'	=>	'http://www.google.com',
+			),
+        )
+    );
+
+    $wp_customize->add_control( 'cta4', array(
+            'label'         	=> 	'Call to Action',
+            'description'   	=> 	'Add an alert call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta4',
+            'type'          	=> 	'text',
+        )
+    );
+
+    $wp_customize->add_control( 'cta4_link', array(
+            'label'         	=> 	'Call to Action Link',
+            'description'   	=> 	'Add a link to the call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta4_link',
+            'type'          	=> 	'url',
+            'input_attrs' 		=> 	array(
+		    	'placeholder'	=>	'http://www.google.com',
+			),
+        )
+    );
+
+    $wp_customize->add_control( 'cta5', array(
+            'label'         	=> 	'Call to Action',
+            'description'   	=> 	'Add an alert call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta5',
+            'type'          	=> 	'text',
+        )
+    );
+
+    $wp_customize->add_control( 'cta5_link', array(
+            'label'         	=> 	'Call to Action Link',
+            'description'   	=> 	'Add a link to the call to action',
+            'section'       	=> 	'mbwpab_content_section',
+            'settings'      	=> 	'cta5_link',
             'type'          	=> 	'url',
             'input_attrs' 		=> 	array(
 		    	'placeholder'	=>	'http://www.google.com',

@@ -24,15 +24,41 @@ function mbwpab_alert_bar_markup() {
     ?>
         <div class="mbwpab-alert-bar<?php if ( true === get_theme_mod( 'alert_close_display' ) ) { echo ' mbwpab-alert-bar-has-close'; }?>">
             <div class="wrap">
+                <?php if ( get_option( 'title' ) ) { ?>
+                    <h1 class="mbwpab-alert-title"><?php echo get_option( 'title' ); ?></h1>
+                <?php } ?>
                 <p class="mbwpab-alert-message">
-                    <?php if ( get_option( 'title' ) ) { ?>
-                        <span class="mbwpab-alert-title"><?php echo get_option( 'title' ); ?></span><span class="mbwpab-alert-title-sep">:</span>
-                    <?php } ?>
                     <?php if ( get_option( 'message' ) ) { ?>
                         <span class="mbwpab-alert-message"><?php echo get_option( 'message' ); ?></span>
                     <?php } ?>  
-                    <?php if ( get_option( 'cta' ) ) { ?>
-                        <span class="mbwpab-alert-cta-sep">-</span> <a href="<?php echo get_option( 'cta_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta' ); ?></a>
+                </p>
+                <p class="mbwpab-alert-message">
+                    <?php if ( get_option( 'cta1' ) ) { ?>
+                        <a href="<?php echo get_option( 'cta1_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta1' ); ?></a>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta1' ) && get_option( 'cta2' ) ) { ?>
+                        <span class="mbwpab-alert-cta-sep"> | </span>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta2' ) ) { ?>
+                        <a href="<?php echo get_option( 'cta2_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta2' ); ?></a>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta2' ) && get_option( 'cta3' ) ) { ?>
+                        <span class="mbwpab-alert-cta-sep"> | </span>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta3' ) ) { ?>
+                        <a href="<?php echo get_option( 'cta3_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta3' ); ?></a>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta3' ) && get_option( 'cta4' ) ) { ?>
+                        <span class="mbwpab-alert-cta-sep"> | </span>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta4' ) ) { ?>
+                        <a href="<?php echo get_option( 'cta4_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta4' ); ?></a>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta4' ) && get_option( 'cta5' ) ) { ?>
+                        <span class="mbwpab-alert-cta-sep"> | </span>
+                    <?php } ?> 
+                    <?php if ( get_option( 'cta5' ) ) { ?>
+                        <a href="<?php echo get_option( 'cta5_link' ); ?>"<?php if ( true === get_theme_mod( 'cta_target_blank' ) ) { echo ' target="_blank"'; }?> class="mbwpab-alert-cta"><?php echo get_option( 'cta5' ); ?></a>
                     <?php } ?> 
                 </p>
                 <?php if ( true === get_theme_mod( 'alert_close_display' ) ) { ?>
